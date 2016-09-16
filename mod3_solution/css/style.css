@@ -1,0 +1,26 @@
+/*navbar*/
+.navbar{
+	background-color: green;
+}
+/*navbar ends*/
+
+.container{
+	background-color: black;
+	padding-right: 0px;
+}
+
+/*navbar header starts*/
+.navbar-header{
+	background-color: red;
+}
+/*navbar header ends*/
+.container-fluid button{
+	float: right;
+}
+.type-alignment{
+	text-align: center;
+}
+.box{
+	border: 1px solid black;
+	
+}
