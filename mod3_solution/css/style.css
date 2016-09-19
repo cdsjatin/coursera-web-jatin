@@ -13,7 +13,7 @@
 body{
 	background-color: white;
 }
-.navbar-brand,h1{
+.navbar > .container .navbar-brand,h1{
 	box-sizing: border-box;
 	font-weight: bold;
 	text-transform: uppercase;
