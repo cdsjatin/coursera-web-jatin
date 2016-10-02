@@ -134,8 +134,7 @@ function buildAndShowHomeHTML (categories) {
        var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml,string,chosenCategoryShortName);
       console.log("homeHtml: "+homeHtml);
       console.log("home html to be inserted: "+homeHtmlToInsertIntoMainPage)
-       var inserted = insertHtml("#main-content",homeHtmlToInsertIntoMainPage);
-      console.log("inserted Html: "+inserted);
+       insertHtml("#main-content",homeHtmlToInsertIntoMainPage);
 
       // TODO: STEP 4: Insert the the produced HTML in STEP 3 into the main page
       // Use the existing insertHtml function for that purpose. Look through this code for an example
