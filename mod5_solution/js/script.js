@@ -116,12 +116,26 @@ function buildAndShowHomeHTML (categories) {
       // it into the home html snippet.
        
 
-       var chosenCategoryShortName = chooseRandomCategory(categories);
-       chosenCategoryShortName = "'" + chosenCategoryShortName + "'";
-       var string = "randomCategoryShortName";
-       var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml,string,chosenCategoryShortName);
-       insertHtml("#main-content",homeHtmlToInsertIntoMainPage);
 
+       // var chosenCategoryShortName = chooseRandomCategory(categories);
+       // chosenCategoryShortName = "'" + chosenCategoryShortName + "'";
+       // var string = "randomCategoryShortName";
+       // var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml,string,chosenCategoryShortName);
+       // insertHtml("#main-content",homeHtmlToInsertIntoMainPage);
+
+
+        console.log("categories: "+categories);
+       var chosenCategoryShortName = chooseRandomCategory(categories);
+      console.log("chosen category: "+chosenCategoryShortName);
+       chosenCategoryShortName = "'" + chosenCategoryShortName + "'";
+      console.log("chosen Category short Name new: "+chosenCategoryShortName);
+       var string = "randomCategoryShortName";
+      console.log("string to be replaced: "+string);
+       var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml,string,chosenCategoryShortName);
+      console.log("homeHtml: "+homeHtml);
+      console.log("home html to be inserted: "+homeHtmlToInsertIntoMainPage)
+       var inserted = insertHtml("#main-content",homeHtmlToInsertIntoMainPage);
+      console.log("inserted Html: "+inserted);
 
       // TODO: STEP 4: Insert the the produced HTML in STEP 3 into the main page
       // Use the existing insertHtml function for that purpose. Look through this code for an example
@@ -250,6 +264,8 @@ function buildMenuItemsViewHtml(categoryMenuItems,
                                 menuItemsTitleHtml,
                                 menuItemHtml) {
 
+  console.log("categoryMenuItems"+categoryMenuItems);
+  console.log("category"+categoryMenuItems.category.name);
   menuItemsTitleHtml =
     insertProperty(menuItemsTitleHtml,
                    "name",
