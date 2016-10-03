@@ -124,16 +124,16 @@ function buildAndShowHomeHTML (categories) {
        // insertHtml("#main-content",homeHtmlToInsertIntoMainPage);
 
 
-        console.log("categories: "+categories);
+
+
        var chosenCategoryShortName = chooseRandomCategory(categories);
-      console.log("chosen category: "+chosenCategoryShortName);
-       chosenCategoryShortName = "'" + chosenCategoryShortName + "'";
-      console.log("chosen Category short Name new: "+chosenCategoryShortName);
+
+       chosenCategoryShortName = "'"+chosenCategoryShortName.short_name+"'" ;
+
        var string = "randomCategoryShortName";
-      console.log("string to be replaced: "+string);
+      
        var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml,string,chosenCategoryShortName);
-      console.log("homeHtml: "+homeHtml);
-      console.log("home html to be inserted: "+homeHtmlToInsertIntoMainPage)
+
        insertHtml("#main-content",homeHtmlToInsertIntoMainPage);
 
       // TODO: STEP 4: Insert the the produced HTML in STEP 3 into the main page
@@ -264,7 +264,7 @@ function buildMenuItemsViewHtml(categoryMenuItems,
                                 menuItemHtml) {
 
   
-  console.log("category"+categoryMenuItems.category.name);
+ // console.log("category"+categoryMenuItems.category.name);
   menuItemsTitleHtml =
     insertProperty(menuItemsTitleHtml,
                    "name",
